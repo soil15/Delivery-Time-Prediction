@@ -1,0 +1,73 @@
+<html>
+  <body>
+    <form action="{{ url_for('predict_datapoint') }}" method="POST">
+      <div class="form-group">
+        <label for="Delivery_person_Age">Age:</label>
+        <input type="text" id="Age" name="Age" placeholder="Enter Age vale (Int)" />
+      </div>
+
+      <div class="form-group">
+        <label for="Delivery_person_ratings">Rating:</label>
+        <input type="text" id="Rating" name="Rating" placeholder="Enter rating value (Int)" />
+      </div>
+
+      <div class="form-group">
+        <label for="Order_Date">Order_date:</label>
+        <input type="text" id="Order_Date" name="Order_Date" placeholder="Enter Order_Date Str(DD-MM-YY)" />
+      </div>
+
+      <div class="form-group">
+        <label for="Time_Orderd">Time_Orderd:</label>
+        <input type="text" id="Time_Orderd" name="Time_Orderd" placeholder="Enter Time_Orderd str(HH:MM:SS)" />
+      </div>
+
+      <div class="form-group">
+        <label for="Time_order_picked">Time_order_picked:</label>
+        <input type="text" id="Time_order_picked" name="Time_order_picked" placeholder="Enter Time_order_picked str(HH:MM:SS)" />
+      </div>
+
+      <div class="form-group">
+        <label for="Weather_conditions">Weather_conditions:</label>
+        <input type="text" id="Weather_conditions" name="Weather_conditions" placeholder="Enter weather conditions" />
+      </div>
+
+      <div class="form-group">
+        <label for="Road_traffic_density">Road_traffic_density:</label>
+        <input type="text" id="Road_traffic_density" name="Road_traffic_density" placeholder="Enter Road_traffic_density" />
+      </div>
+
+      <div class="form-group">
+        <label for="Vehicle_cnodition">Vehicle_condition:</label>
+        <input type="text" id="v_condition" name="v_condition" placeholder="Enter Vehicle_condition vale (Int)" />
+      </div>
+
+      <div class="form-group">
+        <label for="Type_of_order">Type_of_order:</label>
+        <input type="text" id="Type_of_order" name="Type_of_order" placeholder="Enter Type_of_order" />
+      </div>
+
+      <div class="form-group">
+        <label for="Type_of_vehicle">Type_of_vehicle:</label>
+        <input type="text" id="Type_of_vehicle" name="Type_of_vehicle" placeholder="Enter Type_of_vehicle" />
+      </div>
+
+      <div class="form-group">
+        <label for="Multiple_deliveries">Multiple_deliveries:</label>
+        <input type="text" id="Multiple_deliveries" name="Multiple_deliveries" placeholder="Enter Multiple_deliveries vale (Int)" />
+      </div>
+
+      <div class="form-group">
+        <label for="Festival">Festival:</label>
+        <input type="text" id="Festival" name="Festival" placeholder="Enter Festival" />
+      </div>
+
+      <div class="form-group">
+        <label for="City">City:</label>
+        <input type="text" id="City" name="City" placeholder="Enter City" />
+      </div>
+
+      <div style="clear:both;"></div>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

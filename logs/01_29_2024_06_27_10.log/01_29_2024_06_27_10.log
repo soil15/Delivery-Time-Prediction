@@ -1,0 +1,20 @@
+[ 2024-01-29 06:27:11,382 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2024-01-29 06:27:11,390 ] 224 werkzeug - INFO -  * Debugger PIN: 867-450-089
+[ 2024-01-29 06:27:11,466 ] 224 werkzeug - INFO - 127.0.0.1 - - [29/Jan/2024 06:27:11] "GET /predict HTTP/1.1" 200 -
+[ 2024-01-29 06:27:12,331 ] 224 werkzeug - INFO - 127.0.0.1 - - [29/Jan/2024 06:27:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2024-01-29 06:27:29,967 ] 224 werkzeug - INFO - 127.0.0.1 - - [29/Jan/2024 06:27:29] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+[ 2024-01-29 06:27:30,630 ] 224 werkzeug - INFO - 127.0.0.1 - - [29/Jan/2024 06:27:30] "GET /predict?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[ 2024-01-29 06:27:30,631 ] 224 werkzeug - INFO - 127.0.0.1 - - [29/Jan/2024 06:27:30] "GET /predict?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[ 2024-01-29 06:27:30,695 ] 224 werkzeug - INFO - 127.0.0.1 - - [29/Jan/2024 06:27:30] "GET /predict?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[ 2024-01-29 06:27:30,853 ] 224 werkzeug - INFO - 127.0.0.1 - - [29/Jan/2024 06:27:30] "[36mGET /predict?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-01-29 06:28:14,656 ] 224 werkzeug - INFO - 127.0.0.1 - - [29/Jan/2024 06:28:14] "GET /predict HTTP/1.1" 200 -
+[ 2024-01-29 06:28:28,687 ] 224 werkzeug - INFO - 127.0.0.1 - - [29/Jan/2024 06:28:28] "GET /predict HTTP/1.1" 200 -
+[ 2024-01-29 06:28:31,557 ] 224 werkzeug - INFO - 127.0.0.1 - - [29/Jan/2024 06:28:31] "GET /predict HTTP/1.1" 200 -
+[ 2024-01-29 06:28:32,956 ] 224 werkzeug - INFO - 127.0.0.1 - - [29/Jan/2024 06:28:32] "GET /predict HTTP/1.1" 200 -
+[ 2024-01-29 06:28:34,071 ] 224 werkzeug - INFO - 127.0.0.1 - - [29/Jan/2024 06:28:34] "GET /predict HTTP/1.1" 200 -
+[ 2024-01-29 06:28:54,302 ] 224 werkzeug - INFO - 127.0.0.1 - - [29/Jan/2024 06:28:54] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+[ 2024-01-29 06:28:54,341 ] 224 werkzeug - INFO - 127.0.0.1 - - [29/Jan/2024 06:28:54] "GET /predict?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[ 2024-01-29 06:28:54,349 ] 224 werkzeug - INFO - 127.0.0.1 - - [29/Jan/2024 06:28:54] "GET /predict?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[ 2024-01-29 06:28:54,428 ] 224 werkzeug - INFO - 127.0.0.1 - - [29/Jan/2024 06:28:54] "GET /predict?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[ 2024-01-29 06:28:54,602 ] 224 werkzeug - INFO - 127.0.0.1 - - [29/Jan/2024 06:28:54] "[36mGET /predict?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-01-29 06:29:20,099 ] 224 werkzeug - INFO -  * Detected change in 'D:\\FSDS_2.0\\python\\Machine_learning\\Projects\\delivery_time_prediction\\src\\pipelines\\prediction_pipeline.py', reloading
