@@ -29,14 +29,12 @@ class PredictionPipeline:
 
         logging.info('length of input data columns after date time processing : {}'.format(len(input_df.columns)))
         logging.info('input data columns after date time processing : {}'.format(list(input_df.columns)))
-        
 
         array = preprocessor.transform(input_df)
         
         pred = model.predict(array)
 
         return pred
-
 
 class CustomData:
     def __init__(
@@ -69,7 +67,6 @@ class CustomData:
         self.multiple_deliveries = multiple_deliveries
         self.featival = Festival
         self.city = City
-
 
     def get_custom_data_as_df(self):
         
