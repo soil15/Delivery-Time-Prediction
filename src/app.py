@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template, jsonify
+from src.components.data_ingestion import DataIngestion, DataIngestionConfig
 from src.pipelines.prediction_pipeline import CustomData, PredictionPipeline
 from logger import logging
 

@@ -1,0 +1,16 @@
+[ 2024-04-21 10:59:22,096 ] 30 root - INFO - Data ingestion has started
+[ 2024-04-21 10:59:27,193 ] 34 root - INFO - Dataset Has been read
+[ 2024-04-21 10:59:27,800 ] 41 root - INFO - Raw.csv has been save at path : Artifacts\raw.csv
+[ 2024-04-21 10:59:27,849 ] 42 root - INFO - raw.csv
+  Delivery_person_ID  Delivery_person_Age  Delivery_person_Ratings  ...  Festival           City  Time_taken (min)
+0      DEHRES17DEL01                 36.0                      4.2  ...        No  Metropolitian                46
+1      KOCRES16DEL01                 21.0                      4.7  ...        No  Metropolitian                23
+2     PUNERES13DEL03                 23.0                      4.7  ...        No  Metropolitian                21
+3     LUDHRES15DEL02                 34.0                      4.3  ...        No  Metropolitian                20
+4      KNPRES14DEL02                 24.0                      4.7  ...        No  Metropolitian                41
+
+[5 rows x 19 columns]
+[ 2024-04-21 10:59:27,850 ] 43 root - INFO - Dimesions of the dataset : (41359, 19)
+[ 2024-04-21 10:59:27,873 ] 47 root - INFO - Divide dataset into trainning and testing data
+[ 2024-04-21 10:59:28,442 ] 57 root - INFO - Saved train.csv and test.csv to Artifacts\train.csv and Artifacts\test.csv respectively
+[ 2024-04-21 10:59:28,442 ] 60 root - INFO - Data Ingestion Complete
