@@ -1,3 +1,0 @@
-[ 2024-01-29 06:52:51,779 ] 224 werkzeug - WARNING -  * Debugger is active!
-[ 2024-01-29 06:52:51,788 ] 224 werkzeug - INFO -  * Debugger PIN: 867-450-089
-[ 2024-01-29 06:53:16,542 ] 224 werkzeug - INFO -  * Detected change in 'D:\\FSDS_2.0\\python\\Machine_learning\\Projects\\delivery_time_prediction\\src\\pipelines\\prediction_pipeline.py', reloading

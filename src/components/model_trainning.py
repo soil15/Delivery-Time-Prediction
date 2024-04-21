@@ -7,7 +7,7 @@ import sys
 import pandas as pd
 import numpy as np
 from src.utils import save_obj, evaluate_model
-
+from sklearn.metrics import r2_score
 
 
 @dataclass
@@ -27,6 +27,8 @@ class ModelTrainning:
         try:
 
             model_performance = {}
+
+
             
             X_train, y_train, X_test, y_test = (
                 train_array[:,:-1],
@@ -34,6 +36,8 @@ class ModelTrainning:
                 test_array[:,:-1],
                 test_array[:,-1]
             )
+
+            # logging.info('jugaad : {}'.format(X_train[0, :]))
 
             models = {
                 'Linear_Regression' : LinearRegression(),
@@ -47,7 +51,14 @@ class ModelTrainning:
                 model.fit(X_train, y_train)
                 y_pred = model.predict(X_test)
 
-                model_performance[model_name] = evaluate_model(y_pred, y_test)
+#----------------- Logging Perfromance of the model ---------------------------------------
+                
+                logging.info('model_name : {}, trainning_accuracy : {}, testing_accuracy : {}'.format(model_name, model.score(X_train, y_train) * 100, r2_score(y_test, y_pred) * 100))
+                logging.info('Prediction : {}'.format(y_pred))
+
+#------------------------------------------------------------------------------------------
+
+                model_performance[model_name] = evaluate_model(y_test, y_pred) * 100
 
 
                 # print('{}, {}, performance : {}'.format(model_name, model, evaluate_model(y_pred, y_test)))

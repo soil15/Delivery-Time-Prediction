@@ -5,7 +5,7 @@ import os
 from src.logger import logging
 from src.exception import custom_exception
 from dataclasses import dataclass
-from src.utils import sep_cat_num_cols, process_date_time_features, save_obj
+from src.utils import sep_cat_num_cols, process_date_time_features, save_obj, do_binary_encoding
 from src.components.data_ingestion import DataIngestion
 from src.components.model_trainning import ModelTrainning
 from sklearn.preprocessing import StandardScaler
@@ -87,7 +87,19 @@ class DataTransformation():
             input_train_df = process_date_time_features(input_train_df, self.data_transformation_config.date_time_features)
             input_test_df = process_date_time_features(input_test_df, self.data_transformation_config.date_time_features)
 
+
+#-----------Performing Binary Encoding Manually for all the categorical columns------------------------------------------------------------------------------------# 
+            
+            # _, cat_cols = sep_cat_num_cols(input_train_df, self.data_transformation_config.out_put_feature)
+            # input_train_df, _ = do_binary_encoding(cat_cols, input_train_df)
+            # input_test_df, _ = do_binary_encoding(cat_cols, input_test_df)
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
             pre_processor_object = self.get_pre_processor_obj(input_train_df.head())
+            
+            logging.info('length of columns after data time processing : {}'.format(len(list(input_test_df.columns))))
+            logging.info('columns before transformming data : {}'.format(list(input_test_df.columns)))
 
             input_train_arr = pre_processor_object.fit_transform(input_train_df)
             input_test_arr = pre_processor_object.transform(input_test_df)
@@ -112,8 +124,5 @@ class DataTransformation():
 
         except Exception as e:
 
-            logging.info(
-                'Exception occured at data_transformation.py -> initiate_data_transformation')
+            logging.info('Exception occured at data_transformation.py -> initiate_data_transformation')
             raise custom_exception(e, sys)
-
-

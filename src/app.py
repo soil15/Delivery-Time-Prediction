@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template, jsonify
 from src.pipelines.prediction_pipeline import CustomData, PredictionPipeline
+from logger import logging
 
 application = Flask(__name__, template_folder='templates')
 
@@ -39,6 +40,9 @@ def predict_datapoint():
         df = data.get_custom_data_as_df()
         
         pred_pipeline_obj = PredictionPipeline()
+
+        logging.info('Input DataFrame columns : {}'.format(list(df.columns)))
+
         result = pred_pipeline_obj.predict(df)
         
         print('Result => {}'.format(result))

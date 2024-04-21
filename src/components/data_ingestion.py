@@ -17,7 +17,7 @@ class DataIngestionConfig:
     raw_data_path = os.path.join('Artifacts', 'raw.csv')
     train_data_path = os.path.join('Artifacts', 'train.csv')
     test_data_path = os.path.join('Artifacts', 'test.csv')
-
+    
 
 class DataIngestion:
 
@@ -40,6 +40,7 @@ class DataIngestion:
             df.to_csv(self.data_ingestion_config.raw_data_path, index=False)
             logging.info('Raw.csv has been save at path : {}'.format(self.data_ingestion_config.raw_data_path))
             logging.info('raw.csv\n{}'.format(df.head()))
+            logging.info('Dimesions of the dataset : {}'.format(df.shape))
 
             # Dividing Datset into Trainning and Testing Data
             train_set, test_set = train_test_split(df, test_size=0.3, random_state=15)

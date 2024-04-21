@@ -20,8 +20,6 @@ def get_req_list(path:str)->list():
 
         return requirments
 
-
-
 setup(
     name='Regressior_preoject_2',
     version='0.0.1',

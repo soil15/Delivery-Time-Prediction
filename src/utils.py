@@ -5,6 +5,7 @@ import sys
 import os
 import pickle
 from sklearn.metrics import r2_score
+import category_encoders as ce
 
 
 def sep_cat_num_cols(df: pd.DataFrame, out_put_feature: str) -> (list(), list()):
@@ -67,7 +68,7 @@ def process_date_time_features(df:pd.DataFrame, features)->pd.DataFrame:
         raise custom_exception(e, sys)
 
 
-def new_list_of_features(size:int, feature:str)->list():
+def new_list_of_features(size:int, feature:str)->list:
 
     return [(feature + str(i+1)) for i in range(size)]
 
@@ -115,3 +116,21 @@ def load_obj(file_path):
     except Exception as e:
         logging.info('Exception occured at utils.py->load_obj')
         raise  custom_exception(e, sys)
+    
+
+def do_binary_encoding(features:list, df:pd.DataFrame)->(pd.DataFrame, list):
+    
+    binary_encoder = ce.BinaryEncoder()
+
+    new_added_features = []
+
+    for feature in features:
+
+        new_feature_list = list(pd.DataFrame(binary_encoder.fit_transform(df[feature])).columns)
+        df[new_feature_list] = pd.DataFrame(binary_encoder.fit_transform(df[feature]))
+
+        new_added_features += new_feature_list
+                                            
+        df.drop(feature, axis=1, inplace=True)
+
+    return (df.copy(deep=True), new_added_features)

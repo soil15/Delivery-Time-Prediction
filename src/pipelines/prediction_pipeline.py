@@ -1,4 +1,4 @@
-from src.utils import load_obj, process_date_time_features
+from src.utils import load_obj, process_date_time_features, sep_cat_num_cols, do_binary_encoding
 import pandas as pd
 from src.logger import logging
 import os
@@ -21,11 +21,20 @@ class PredictionPipeline:
         preprocessor = load_obj(preprocessor_path)
         
         input_df = process_date_time_features(df=data, features=data_transformation_obj.date_time_features)
+
+        # _, cat_cols = sep_cat_num_cols(input_df, data_transformation_obj.out_put_feature)
+        # input_df = do_binary_encoding(cat_cols, input_df)
         
+        # logging.info('input {}'.format(input_df))
+
+        logging.info('length of input data columns after date time processing : {}'.format(len(input_df.columns)))
+        logging.info('input data columns after date time processing : {}'.format(list(input_df.columns)))
+        
+
         array = preprocessor.transform(input_df)
         
         pred = model.predict(array)
-        
+
         return pred
 
 
